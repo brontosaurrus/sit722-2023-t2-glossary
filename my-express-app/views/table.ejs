@@ -1,0 +1,30 @@
+<!-- views/table.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Table</title>
+</head>
+<body>
+<h1>SIT722 DevOps Glossary</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Term</th>
+        <th>Description</th>
+        <th>References</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% terms.forEach(term => { %>
+        <tr>
+        <td><%= term.id %></td>
+        <td><%= term.term %></td>
+        <td><%= term.description %></td>
+        <td><%= term.references %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
+</body>
+</html>
