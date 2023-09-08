@@ -100,6 +100,39 @@ router.get('/table', function(req, res, next) {
     { id: 30, term: 'Infrastructure Automation', description: 'A selection of automated processes that handle repeated tasks in relation to setting up and managing infrastructure services. This allows for the reduction of manual task configuration in these infrastructure setups. It also reduces human intervention and ensures more consistent services. ', references: '“What is infrastructure automation?,” www.redhat.com. https://www.redhat.com/en/topics/automation/what-is-infrastructure-automation\n' +
           '‌\n' +
           'S. Sengupta, “IT Infrastructure Automation: A Beginner’s Guide,” BMC Blogs. https://www.bmc.com/blogs/it-infrastructure-automation/\n'},
+    { id: 31, term: 'Serverless computing', description: 'A cloud computing model that abstracts the infrastructure management from developers. Cloud providers can often hand this through multiple kinds of resource allocation, provisioning and scaling. It allows for infrastructure to be created in a way that is easier and more efficient to manage. ', references: '“What Is Serverless Computing? | Serverless Definition | Cloudflare UK,” Cloudflare. Available: https://www.cloudflare.com/en-gb/learning/serverless/what-is-serverless/\n' +
+          '\n' +
+          '“What is Serverless Computing? | IBM,” www.ibm.com. https://www.ibm.com/topics/serverless\n'},
+    { id: 32, term: 'artifact', description: 'An artifact is a kind of package/application that is deployable during the software development process. It can include libraries, configuration files, compiled code and anything required to run an application.', references: '“What is a Software Artifact in DevOps?,” JFrog, May 15, 2019. https://jfrog.com/devops-tools/article/what-is-a-software-artifact/\n' +
+          '‌\n' +
+          '“What is a DevOps Artifact? & Best Practices - Instatus blog,” instatus.com. https://instatus.com/blog/devops-artifacts (accessed Sep. 08, 2023).\n'},
+    { id: 33, term: 'Secret management', description: 'It involves the ability to securely store, retrieve and manage sensitive information in a software application. It is often used for passwords/credentials, api keys, and encryption keys needed in these applications. Cloud providers often have services for secret management that can be incorporated into the build process. ', references: '“What is Secrets Management?,” BeyondTrust. https://www.beyondtrust.com/resources/glossary/secrets-management#:~:text=Secrets%20management%20refers%20to%20the (accessed Sep. 08, 2023).\n' +
+          '‌\n' +
+          'T. Guo, “On DevOps — 11. Secret Management — an Introduction to Secret Manager and Best Practice,” 4th Coffee, Feb. 21, 2021. https://medium.com/4th-coffee/on-devops-11-secret-management-an-introduction-to-secret-manager-and-best-practice-da74c6f03aa7 (accessed Sep. 08, 2023).\n' +
+          '‌\n'},
+    { id: 34, term: 'Immutable deployment', description: 'It is a deployment strategy in which any changes in a deployment results in creating entirely new instances of that deployment object. This is in comparison to modifying existing deployments. This approach assists in providing consistent and predictable deployments. ', references: '“What are Atomic deploys? Immutable deploys? Learn here!,” Netlify. https://www.netlify.com/blog/2021/02/23/terminology-explained-atomic-and-immutable-deploys/#:~:text=While%20a%20%22mutable%22%20item%20can\n' +
+          '‌\n' +
+          'DevopsCurry, “Understanding the Mutable & Immutable Infrastructure in DevOps world,” DevopsCurry, Sep. 22, 2020. https://medium.com/devopscurry/understanding-the-mutable-immutable-infrastructure-in-devops-world-64d33134e233\n'},
+    { id: 35, term: 'Infrastructure as code (IaC)', description: 'Defining and provisioning infrastructure resources for an application using code and related automation tools. It allows for configurations to be versioned and automated in code repositories. ', references: '“What is Infrastructure as Code with Terraform? | Terraform | HashiCorp Developer,” What is Infrastructure as Code with Terraform? | Terraform | HashiCorp Developer. https://developer.hashicorp.com/terraform/tutorials/aws-get-started/infrastructure-as-code\n' +
+          '\n' +
+          '“Infrastructure as Code | IBM,” www.ibm.com. https://www.ibm.com/topics/infrastructure-as-code\n'},
+    { id: 36, term: 'alerting', description: 'In devops, automated notifications can be set up to trigger when certain conditions are met. This is useful in monitoring health and performance of applications. When issues occur the alerts are triggered for visibility to then be more efficient in responses. ', references: '“Effective Alerting in Practice,” newrelic.com, Apr. 13, 2023. https://newrelic.com/resources/ebooks/effective-alerting-guide (accessed Sep. 08, 2023).\n' +
+          '\n' +
+          '“What is Devops Monitoring? | CrowdStrike,” crowdstrike.com. https://www.crowdstrike.com/cybersecurity-101/observability/devops-monitoring/\n'},
+    { id: 37, term: 'Incident response', description: 'When alerts occur and/or if an issue is found in an application, an incident response then handles the process of resolving the issue. This involves the processes of detecting, reporting, assessing and mitigating any incidents. ', references: '“What is Incident Response?,” PagerDuty. https://www.pagerduty.com/resources/learn/what-is-incident-response/#:~:text=Incident%20response%20(IR)%20is%20a (accessed Sep. 08, 2023).\n' +
+          '‌\n' +
+          '“Applying DevOps Principles in Incident Response,” insights.sei.cmu.edu, Sep. 17, 2015. https://insights.sei.cmu.edu/blog/applying-devops-principles-in-incident-response/ (accessed Sep. 08, 2023).\n'},
+    { id: 38, term: 'observability', description: 'Observability in the context of devops is the ability to understand and diagnose complex infrastructure applications. By collecting and analysing data from different sources such as logs, metrics and events insights can be taken into the behaviour and performance of a system. ', references: '"Observability vs. monitoring in DevOps,” GitLab. https://about.gitlab.com/blog/2022/06/14/observability-vs-monitoring-in-devops/ (accessed Sep. 08, 2023).\n' +
+          '‌\n' +
+          'G. Author, “What Is Observability in DevOps? A Practical Guide,” Netreo, Nov. 02, 2021. https://www.netreo.com/blog/what-is-observability-in-devops/ (accessed Sep. 08, 2023).\n'},
+    { id: 39, term: 'Compliance as code', description: 'The process of codifying compliance requirements in infrastructure and application code. This allows for any security and compliance standards to be handled automatically within the code, making it easier to enforce and comply. ', references: '“Decoder: Compliance as code,” Thoughtworks. https://www.thoughtworks.com/en-gb/insights/decoder/c/compliance-as-code#:~:text=Compliance%20as%20code%20aims%20to (accessed Sep. 08, 2023).\n' +
+          '‌\n' +
+          '“Compliance as Code - Complete Guide,” www.xenonstack.com. https://www.xenonstack.com/blog/compliance-as-a-code/ (accessed Sep. 08, 2023).\n'},
+    { id: 40, term: 'Secret rotation', description: 'Secret rotation is a security practice in which secrets such as encryption keys and passwords are periodically updated. The continuous alteration of these secrets enhances security and minimises the risk of any access from someone unauthorised. ', references: '“Rotate AWS Secrets Manager secrets - AWS Secrets Manager,” docs.aws.amazon.com. https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotating-secrets.html (accessed Sep. 08, 2023).\n' +
+          '‌\n' +
+          'M. Hossain, “Secure your pipelines by frequently rotating secrets,” Reverse Engineering, May 28, 2021. https://moimhossain.com/2021/05/28/secure-your-pipelines-by-frequently-rotating-secrets/ (accessed Sep. 08, 2023).\n'},
+
+
 
   ];
 
